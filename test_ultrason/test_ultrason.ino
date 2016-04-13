@@ -63,7 +63,7 @@ void loop()
    if(duree > 30000)
    {
       // si la durée est supérieure à 30ms, l'onde est perdue
-	  lcd.LCD_write_string(0, 3, "Onde perdue, mesure échouée !", MENU_NORMAL );
+	  lcd.LCD_write_string(0, 3, "Onde perdue, mesure echouee!", MENU_NORMAL );
       Serial.println("Onde perdue, mesure échouée !");
    }
    else
@@ -82,7 +82,6 @@ void loop()
       Serial.println(distance); //affiche la distance mesurée (en mètres)
 	  
 	  itoa(distance*100, buffer, 10);
-	  lcd.LCD_write_string(30, 3, "       ", MENU_NORMAL ); //pour effacer l'ancienne valeur
 	  lcd.LCD_write_string(30, 3, "       ", MENU_NORMAL ); //pour effacer l'ancienne valeur
 	  lcd.LCD_write_string(30, 3, buffer, MENU_NORMAL );
    }
